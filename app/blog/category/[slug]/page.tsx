@@ -3,40 +3,54 @@ import PostList from '@/components/blog/PostList'
 import SearchBar from '@/components/blog/SearchBar'
 import Link from 'next/link'
 import { clsx } from 'clsx'
-
 import Pagination from '@/components/ui/Pagination'
+import { notFound } from 'next/navigation'
 
-interface BlogPageProps {
+interface CategoryPageProps {
+  params: Promise<{
+    slug: string
+  }>
   searchParams: Promise<{
     q?: string
-    category?: string
     page?: string
   }>
 }
 
-export default async function BlogPage({ searchParams }: BlogPageProps) {
-  const { q, category, page: pageStr } = await searchParams
+export default async function CategoryPage({ params, searchParams }: CategoryPageProps) {
+  const { slug } = await params
+  const { q, page: pageStr } = await searchParams
   const currentPage = parseInt(pageStr || '1', 10)
   const limit = 6
 
+  const categories = await getCategories()
+  const currentCategory = categories.find(c => c.slug === slug)
+
+  if (!currentCategory) {
+    notFound()
+  }
+
   const { posts, total } = await getPosts({
     search: q,
-    category: category,
+    category: slug,
     page: currentPage,
     limit: limit,
   })
 
   const totalPages = Math.ceil(total / limit)
-  const categories = await getCategories()
 
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12">
         <div className="max-w-xl text-center md:text-left">
-          <h1 className="text-4xl font-extrabold text-gray-900 mb-4">Blog</h1>
-          <p className="text-gray-600">
-            Tất cả tài liệu giáo dục và kiến thức về công nghệ dành cho người học mới và nâng cao.
-          </p>
+          <Link href="/blog" className="text-primary-600 hover:underline mb-4 inline-block text-sm font-medium">
+            &larr; Quay lại tất cả bài viết
+          </Link>
+          <h1 className="text-4xl font-extrabold text-gray-900 mb-4">
+            Chuyên mục: <span className="text-primary-600">{currentCategory.name}</span>
+          </h1>
+          {currentCategory.description && (
+            <p className="text-gray-600">{currentCategory.description}</p>
+          )}
         </div>
         <div className="w-full max-w-md">
           <SearchBar />
@@ -50,12 +64,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           <div className="flex flex-wrap lg:flex-col gap-2">
             <Link
               href="/blog"
-              className={clsx(
-                'px-4 py-2 rounded-lg text-sm transition-all',
-                !category 
-                  ? 'bg-primary-600 text-white shadow-sm shadow-primary-200' 
-                  : 'bg-white text-gray-600 border border-gray-100 hover:bg-gray-50'
-              )}
+              className="px-4 py-2 rounded-lg text-sm transition-all bg-white text-gray-600 border border-gray-100 hover:bg-gray-50"
             >
               Tất cả bài viết
             </Link>
@@ -65,7 +74,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                 href={`/blog/category/${cat.slug}${q ? `?q=${q}` : ''}`}
                 className={clsx(
                   'px-4 py-2 rounded-lg text-sm transition-all whitespace-nowrap',
-                  category === cat.slug
+                  slug === cat.slug
                     ? 'bg-primary-600 text-white shadow-sm shadow-primary-200'
                     : 'bg-white text-gray-600 border border-gray-100 hover:bg-gray-50'
                 )}
@@ -88,8 +97,8 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           <Pagination
             totalPages={totalPages}
             currentPage={currentPage}
-            baseUrl="/blog"
-            queryParams={{ q, category }}
+            baseUrl={`/blog/category/${slug}`}
+            queryParams={{ q }}
           />
         </div>
       </div>

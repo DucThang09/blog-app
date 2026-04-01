@@ -1,33 +1,41 @@
 import { getPosts } from '@/lib/api'
 import PostList from '@/components/blog/PostList'
+import FeaturedCarousel from '@/components/blog/FeaturedCarousel'
 import Link from 'next/link'
 import Button from '@/components/ui/Button'
 
 export default async function HomePage() {
-  const posts = await getPosts({ limit: 3 })
+  const { posts: allPosts } = await getPosts()
+  const featuredPosts = allPosts.slice(0, 4)
+  const latestPosts = allPosts.slice(0, 3)
 
   return (
     <div className="flex flex-col gap-16 py-12 lg:py-24">
       {/* Hero Section */}
       <section className="container mx-auto px-4">
-        <div className="max-w-3xl">
-          <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight text-gray-900 mb-6 leading-tight">
-            Nơi chia sẻ <span className="text-primary-600 bg-clip-text">Kiến thức</span> & <span className="text-primary-600">Trải nghiệm</span> của tôi.
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl leading-relaxed">
-            Chào mừng bạn đến với Blog Giáo dục & Kiến thức. Tại đây, chúng tôi chia sẻ những bài giảng, tài liệu học tập và kinh nghiệm thực tế trong lĩnh vực công nghệ và giáo dục.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <Link href="/blog">
-              <Button size="lg" className="rounded-full shadow-lg shadow-primary-200">
-                Khám phá ngay
-              </Button>
-            </Link>
-            <Link href="/about">
-              <Button variant="outline" size="lg" className="rounded-full">
-                Tìm hiểu thêm
-              </Button>
-            </Link>
+        <div className="flex flex-col lg:flex-row gap-12 items-center">
+          <div className="lg:w-1/2">
+            <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight text-gray-900 mb-6 leading-tight">
+              Nơi chia sẻ <span className="text-primary-600 bg-clip-text">Kiến thức</span> & <span className="text-primary-600">Trải nghiệm</span> của tôi.
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl leading-relaxed">
+              Chào mừng bạn đến với Blog Giáo dục & Kiến thức. Tại đây, chúng tôi chia sẻ những bài giảng, tài liệu học tập và kinh nghiệm thực tế trong lĩnh vực công nghệ và giáo dục.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link href="/blog">
+                <Button size="lg" className="rounded-full shadow-lg shadow-primary-200">
+                  Khám phá ngay
+                </Button>
+              </Link>
+              <Link href="/about">
+                <Button variant="outline" size="lg" className="rounded-full">
+                  Tìm hiểu thêm
+                </Button>
+              </Link>
+            </div>
+          </div>
+          <div className="lg:w-1/2 w-full">
+            <FeaturedCarousel posts={featuredPosts} />
           </div>
         </div>
       </section>
@@ -46,7 +54,7 @@ export default async function HomePage() {
             </svg>
           </Link>
         </div>
-        <PostList posts={posts} />
+        <PostList posts={latestPosts} />
       </section>
 
       {/* Subscribe or Call-to-action */}

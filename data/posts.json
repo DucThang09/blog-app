@@ -1,68 +1,266 @@
 [
   {
     "id": "1",
-    "title": "Giới thiệu về Next.js 14",
-    "slug": "gioi-thieu-nextjs-14",
-    "excerpt": "Tìm hiểu về các tính năng mới trong Next.js 14 và App Router",
-    "content": "# Nội dung bài viết...\nNext.js 14 mang đến nhiều cải tiến về hiệu suất và trải nghiệm nhà phát triển. Một trong những tính năng nổi bật là Server Actions, giúp đơn giản hóa việc xử lý form và tương tác với database.",
+    "title": "Phương pháp học tập hiệu quả trong kỷ nguyên số",
+    "slug": "phuong-phap-hoc-tap-hieu-qua",
+    "excerpt": "Học cách tiếp thu kiến thức một cách thông minh và bền vững giữa biển thông tin vô hạn.",
+    "content": "Trong kỷ nguyên số hiện nay, thông tin luôn tràn ngập. Tuy nhiên, kiến thức lại là một thứ khác. Để chuyển đổi từ thông tin sang kiến thức thực thụ, bạn cần có một phương pháp học tập khoa học. Chúng ta sẽ cùng tìm hiểu về kỹ thuật Feynman, phương pháp Spaced Repetition và cách xây dựng hệ thống quản lý tri thức cá nhân (PKM).",
     "coverImage": "https://picsum.photos/800/400?random=1",
     "author": {
       "id": "1",
-      "name": "Nguyễn Văn A",
+      "name": "Giảng viên Nguyễn Văn A",
       "avatar": "https://picsum.photos/100/100?random=101",
-      "bio": "Full-stack Developer"
+      "bio": "Chuyên gia đào tạo Công nghệ & Kỹ năng học tập"
+    },
+    "category": {
+      "id": "3",
+      "name": "Giáo dục",
+      "slug": "giao-duc"
+    },
+    "publishedAt": "2024-03-01T10:00:00Z",
+    "tags": ["giao duc", "hoc tap", "productivity"],
+    "readingTime": 6
+  },
+  {
+    "id": "2",
+    "title": "Làm quen với lập trình qua các ví dụ thực tế",
+    "slug": "lam-quen-lap-trinh-thuc-te",
+    "excerpt": "Lập trình không khó nếu bạn hiểu được bản chất vấn đề thông qua thực tiễn.",
+    "content": "Thay vì học các lý thuyết khô khan, hãy bắt đầu bằng việc giải quyết các bài toán nhỏ trong cuộc sống. Bài viết này hướng dẫn bạn cách tư duy logic và xây dựng các dự án mini đầu tiên bằng JavaScript, một ngôn ngữ phổ biến và dễ tiếp cận.",
+    "coverImage": "https://picsum.photos/800/400?random=2",
+    "author": {
+      "id": "1",
+      "name": "Giảng viên Nguyễn Văn A",
+      "avatar": "https://picsum.photos/100/100?random=101",
+      "bio": "Chuyên gia đào tạo Công nghệ & Kỹ năng học tập"
     },
     "category": {
       "id": "1",
       "name": "Tutorial",
       "slug": "tutorial"
     },
-    "publishedAt": "2024-01-15T10:00:00Z",
-    "tags": ["nextjs", "react", "tutorial"],
+    "publishedAt": "2024-03-05T10:00:00Z",
+    "tags": ["lap trinh", "hoc tap", "javascript"],
     "readingTime": 5
   },
   {
-    "id": "2",
-    "title": "Làm quen với Tailwind CSS",
-    "slug": "lam-quen-tailwind-css",
-    "excerpt": "Tại sao Tailwind CSS lại được yêu thích đến vậy?",
-    "content": "Tailwind CSS là một utility-first CSS framework giúp bạn xây dựng giao diện nhanh chóng mà không cần rời khỏi mã HTML của mình.",
-    "coverImage": "https://picsum.photos/800/400?random=2",
-    "author": {
-      "id": "1",
-      "name": "Nguyễn Văn A",
-      "avatar": "https://picsum.photos/100/100?random=101",
-      "bio": "Full-stack Developer"
-    },
-    "category": {
-      "id": "2",
-      "name": "CSS",
-      "slug": "css"
-    },
-    "publishedAt": "2024-01-20T10:00:00Z",
-    "tags": ["tailwind", "css", "styling"],
-    "readingTime": 4
-  },
-  {
     "id": "3",
-    "title": "TypeScript cho người mới bắt đầu",
-    "slug": "typescript-co-ban",
-    "excerpt": "Học TypeScript để code an toàn hơn và hiệu quả hơn.",
-    "content": "TypeScript là một superset của JavaScript giúp bạn kiểm tra kiểu dữ liệu tĩnh ngay khi viết code.",
+    "title": "Cách xây dựng lộ trình tự học Công nghệ thông tin",
+    "slug": "lo-trinh-tu-hoc-cntt",
+    "excerpt": "Tự học là kỹ năng quan trọng nhất của mọi lập trình viên. Hãy cùng thiết lập một lộ trình chuẩn.",
+    "content": "Thế giới công nghệ thay đổi mỗi ngày. Nếu không có một lộ trình tự học rõ ràng, bạn sẽ rất dễ bị lạc giữa hàng nghìn công nghệ mới. Bài viết này chia sẻ cách chọn lọc kiến thức cốt lõi, cách rèn luyện tư duy thực chiến và cách tìm kiếm nguồn học liệu uy tín.",
     "coverImage": "https://picsum.photos/800/400?random=3",
     "author": {
       "id": "2",
       "name": "Trần Thị B",
       "avatar": "https://picsum.photos/100/100?random=102",
-      "bio": "Frontend Engineer"
+      "bio": "Kỹ sư Phần mềm & Blogger Giáo dục"
     },
     "category": {
-      "id": "1",
-      "name": "Tutorial",
-      "slug": "tutorial"
+      "id": "3",
+      "name": "Giáo dục",
+      "slug": "giao-duc"
     },
-    "publishedAt": "2024-02-01T10:00:00Z",
-    "tags": ["typescript", "javascript", "tutorial"],
+    "publishedAt": "2024-03-10T10:00:00Z",
+    "tags": ["tu hoc", "cntt", "education"],
+    "readingTime": 8
+  },
+  {
+    "id": "4",
+    "title": "Rèn luyện tư duy phản biện trong việc tiếp nhận thông tin",
+    "slug": "tu-duy-phan-bien-thong-tin",
+    "excerpt": "Kỹ năng phân tích và đánh giá thông tin khách quan để có những quyết định sáng suốt nhất.",
+    "content": "Tư duy phản biện (Critical Thinking) không phải là việc phản bác mọi ý kiến mà là khả năng tư duy độc lập. Trong bài viết này, chúng ta sẽ khám phá cách đặt câu hỏi hóc búa, nhận diện các lỗi ngụy biện thường gặp và xây dựng một tư duy sắc bén thông qua việc phân tích đa chiều.",
+    "coverImage": "https://picsum.photos/800/400?random=4",
+    "author": {
+      "id": "2",
+      "name": "Trần Thị B",
+      "avatar": "https://picsum.photos/100/100?random=102",
+      "bio": "Kỹ sư Phần mềm & Blogger Giáo dục"
+    },
+    "category": {
+      "id": "4",
+      "name": "Kỹ năng sống",
+      "slug": "ky-nang-song"
+    },
+    "publishedAt": "2024-03-15T10:00:00Z",
+    "tags": ["critical thinking", "kỹ năng", "thực tế"],
+    "readingTime": 7
+  },
+  {
+    "id": "5",
+    "title": "Tâm lý học trong giảng dạy và truyền đạt",
+    "slug": "tam-ly-hoc-giang-day",
+    "excerpt": "Thấu hiểu người học để nâng cao hiệu suất truyền đạt thông tin một cách tối ưu.",
+    "content": "Làm thế nào để truyền cảm hứng và giúp người học ghi nhớ lâu hơn? Việc áp dụng các nguyên lý tâm lý học như hiệu ứng Zeigarnik hay tháp học tập của Edgar Dale sẽ làm thay đổi hoàn toàn cách bạn giảng dạy. Chúng ta sẽ cùng bàn luận về cách thiết kế bài giảng lôi cuốn và tương tác.",
+    "coverImage": "https://picsum.photos/800/400?random=5",
+    "author": {
+      "id": "1",
+      "name": "Giảng viên Nguyễn Văn A",
+      "avatar": "https://picsum.photos/100/100?random=101",
+      "bio": "Chuyên gia đào tạo Công nghệ & Kỹ năng học tập"
+    },
+    "category": {
+      "id": "2",
+      "name": "Nghiên cứu",
+      "slug": "nghien-cuu"
+    },
+    "publishedAt": "2024-03-18T10:00:00Z",
+    "tags": ["tam ly", "giang day", "nghien cuu"],
+    "readingTime": 9
+  },
+  {
+    "id": "6",
+    "title": "Tối ưu hóa thời gian với kỹ năng quản lý công việc",
+    "slug": "quan-ly-thoi-gian-productivity",
+    "excerpt": "Học cách sắp xếp thứ tự ưu tiên và nâng cao hiệu suất làm việc mỗi ngày.",
+    "content": "Ma trận Eisenhower, phương pháp quả cà chua Pomodoro hay việc lập danh sách việc cần làm (To-do list) hiệu quả chính là chìa khóa để bạn làm chủ thời gian. Bài viết hướng dẫn bạn cách tránh xa những thứ gây xao nhãng và tập trung tối đa vào mục tiêu quan trọng nhất của mình.",
+    "coverImage": "https://picsum.photos/800/400?random=6",
+    "author": {
+      "id": "2",
+      "name": "Trần Thị B",
+      "avatar": "https://picsum.photos/100/100?random=102",
+      "bio": "Kỹ sư Phần mềm & Blogger Giáo dục"
+    },
+    "category": {
+      "id": "3",
+      "name": "Giáo dục",
+      "slug": "giao-duc"
+    },
+    "publishedAt": "2024-03-22T10:00:00Z",
+    "tags": ["productivity", "thoi gian", "ky nang"],
+    "readingTime": 5
+  },
+  {
+    "id": "7",
+    "title": "Kỹ năng thuyết trình lôi cuốn và tự tin",
+    "slug": "ky-nang-thuyet-trinh-tu-tin",
+    "excerpt": "Vượt qua nỗi sợ đứng trước đám đông và truyền tải thông điệp một cách ấn tượng.",
+    "content": "Thuyết trình không chỉ là việc nói, mà là nghệ thuật kể chuyện. Hãy học cách cấu trúc bài thuyết trình, sử dụng ngôn ngữ cơ thể và thiết kế slide chuyên nghiệp để chinh phục mọi khán giả.",
+    "coverImage": "https://picsum.photos/800/400?random=7",
+    "author": {
+      "id": "1",
+      "name": "Giảng viên Nguyễn Văn A",
+      "avatar": "https://picsum.photos/100/100?random=101",
+      "bio": "Chuyên gia đào tạo Công nghệ & Kỹ năng học tập"
+    },
+    "category": {
+      "id": "4",
+      "name": "Kỹ năng sống",
+      "slug": "ky-nang-song"
+    },
+    "publishedAt": "2024-03-25T10:00:00Z",
+    "tags": ["thuyet trinh", "soft skills", "communication"],
+    "readingTime": 4
+  },
+  {
+    "id": "8",
+    "title": "Lợi ích của việc đọc sách mỗi ngày",
+    "slug": "loi-ich-doc-sach-hang-ngay",
+    "excerpt": "Tại sao đọc sách vẫn là cách học tốt nhất mặc dù công nghệ phát triển?",
+    "content": "Sách không chỉ cung cấp kiến thức mà còn rèn luyện sự tập trung sâu. Đọc sách giúp bạn mở rộng vốn từ, giảm căng thẳng và phát triển tư duy trừu tượng một cách hiệu quả.",
+    "coverImage": "https://picsum.photos/800/400?random=8",
+    "author": {
+      "id": "2",
+      "name": "Trần Thị B",
+      "avatar": "https://picsum.photos/100/100?random=102",
+      "bio": "Kỹ sư Phần mềm & Blogger Giáo dục"
+    },
+    "category": {
+      "id": "3",
+      "name": "Giáo dục",
+      "slug": "giao-duc"
+    },
+    "publishedAt": "2024-03-28T10:00:00Z",
+    "tags": ["reading", "books", "learning"],
+    "readingTime": 6
+  },
+  {
+    "id": "9",
+    "title": "Trí tuệ nhân tạo (AI) trong giáo dục hiện đại",
+    "slug": "ai-trong-giao-duc-hien-dai",
+    "excerpt": "Cơ hội và thách thức khi AI bắt đầu len lỏi vào các giảng đường.",
+    "content": "AI đang thay đổi cách chúng ta học và dạy. Từ việc cá nhân hóa lộ trình học tập đến việc hỗ trợ giảng viên chấm bài, AI hứa hẹn một cuộc cách mạng giáo dục đầy tiềm năng.",
+    "coverImage": "https://picsum.photos/800/400?random=9",
+    "author": {
+      "id": "1",
+      "name": "Giảng viên Nguyễn Văn A",
+      "avatar": "https://picsum.photos/100/100?random=101",
+      "bio": "Chuyên gia đào tạo Công nghệ & Kỹ năng học tập"
+    },
+    "category": {
+      "id": "2",
+      "name": "Nghiên cứu",
+      "slug": "nghien-cuu"
+    },
+    "publishedAt": "2024-04-01T10:00:00Z",
+    "tags": ["ai", "education tech", "future"],
+    "readingTime": 10
+  },
+  {
+    "id": "10",
+    "title": "Quản lý tài chính cá nhân cho sinh viên",
+    "slug": "quan-ly-tai-chinh-sinh-vien",
+    "excerpt": "Học cách quản lý ngân sách thông minh ngay từ khi còn ngồi trên ghế nhà trường.",
+    "content": "Tự chủ tài chính bắt đầu từ những thói quen nhỏ. Bài viết chia sẻ cách lập ngân sách hàng tháng, tiết kiệm và đầu tư vào bản thân để chuẩn bị cho tương lai vững chắc hơn.",
+    "coverImage": "https://picsum.photos/800/400?random=10",
+    "author": {
+      "id": "2",
+      "name": "Trần Thị B",
+      "avatar": "https://picsum.photos/100/100?random=102",
+      "bio": "Kỹ sư Phần mềm & Blogger Giáo dục"
+    },
+    "category": {
+      "id": "4",
+      "name": "Kỹ năng sống",
+      "slug": "ky-nang-song"
+    },
+    "publishedAt": "2024-04-05T10:00:00Z",
+    "tags": ["finance", "money", "students"],
+    "readingTime": 5
+  },
+  {
+    "id": "11",
+    "title": "Xây dựng thói quen kiên trì trong học tập",
+    "slug": "thoi-quen-kien-tri-hoc-tap",
+    "excerpt": "Động lực chỉ là bắt đầu, thói quen mới là thứ đưa bạn về đích.",
+    "content": "Làm thế nào để không bỏ cuộc giữa chừng? Bí quyết nằm ở việc thiết lập các mốc mục tiêu nhỏ (micro-targets) và duy trì sự kỷ luật đều đặn mỗi ngày thay vì chờ đợi cảm hứng.",
+    "coverImage": "https://picsum.photos/800/400?random=11",
+    "author": {
+      "id": "1",
+      "name": "Giảng viên Nguyễn Văn A",
+      "avatar": "https://picsum.photos/100/100?random=101",
+      "bio": "Chuyên gia đào tạo Công nghệ & Kỹ năng học tập"
+    },
+    "category": {
+      "id": "3",
+      "name": "Giáo dục",
+      "slug": "giao-duc"
+    },
+    "publishedAt": "2024-04-08T10:00:00Z",
+    "tags": ["habits", "grit", "success"],
+    "readingTime": 6
+  },
+  {
+    "id": "12",
+    "title": "Học ngoại ngữ nhanh và hiệu quả hơn",
+    "slug": "hoc-ngoai-ngu-hieu-qua",
+    "excerpt": "Bí quyết chinh phục một ngôn ngữ mới từ số 0 cho người bận rộn.",
+    "content": "Áp dụng phương pháp đắm mình trong ngôn ngữ (Immersion method) kết hợp với các ứng dụng công nghệ hiện đại sẽ giúp bạn làm chủ ngoại ngữ trong thời gian ngắn nhất.",
+    "coverImage": "https://picsum.photos/800/400?random=12",
+    "author": {
+      "id": "2",
+      "name": "Trần Thị B",
+      "avatar": "https://picsum.photos/100/100?random=102",
+      "bio": "Kỹ sư Phần mềm & Blogger Giáo dục"
+    },
+    "category": {
+      "id": "4",
+      "name": "Kỹ năng sống",
+      "slug": "ky-nang-song"
+    },
+    "publishedAt": "2024-04-12T10:00:00Z",
+    "tags": ["languages", "learning secrets", "tips"],
     "readingTime": 7
   }
 ]

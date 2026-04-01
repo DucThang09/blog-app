@@ -3,9 +3,10 @@ import postsData from '@/data/posts.json'
 
 export async function getPosts(options?: {
   limit?: number
+  page?: number
   search?: string
   category?: string
-}): Promise<Post[]> {
+}): Promise<{ posts: Post[], total: number }> {
   // Simulate API delay
   await new Promise(resolve => setTimeout(resolve, 300))
   
@@ -27,12 +28,17 @@ export async function getPosts(options?: {
     )
   }
 
-  // Limit results
-  if (options?.limit) {
+  const total = posts.length
+
+  // Pagination logic
+  if (options?.page && options?.limit) {
+    const start = (options.page - 1) * options.limit
+    posts = posts.slice(start, start + options.limit)
+  } else if (options?.limit) {
     posts = posts.slice(0, options.limit)
   }
 
-  return posts
+  return { posts, total }
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {
