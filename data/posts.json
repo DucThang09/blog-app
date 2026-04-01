@@ -1,0 +1,68 @@
+[
+  {
+    "id": "1",
+    "title": "Giới thiệu về Next.js 14",
+    "slug": "gioi-thieu-nextjs-14",
+    "excerpt": "Tìm hiểu về các tính năng mới trong Next.js 14 và App Router",
+    "content": "# Nội dung bài viết...\nNext.js 14 mang đến nhiều cải tiến về hiệu suất và trải nghiệm nhà phát triển. Một trong những tính năng nổi bật là Server Actions, giúp đơn giản hóa việc xử lý form và tương tác với database.",
+    "coverImage": "https://picsum.photos/800/400?random=1",
+    "author": {
+      "id": "1",
+      "name": "Nguyễn Văn A",
+      "avatar": "https://picsum.photos/100/100?random=101",
+      "bio": "Full-stack Developer"
+    },
+    "category": {
+      "id": "1",
+      "name": "Tutorial",
+      "slug": "tutorial"
+    },
+    "publishedAt": "2024-01-15T10:00:00Z",
+    "tags": ["nextjs", "react", "tutorial"],
+    "readingTime": 5
+  },
+  {
+    "id": "2",
+    "title": "Làm quen với Tailwind CSS",
+    "slug": "lam-quen-tailwind-css",
+    "excerpt": "Tại sao Tailwind CSS lại được yêu thích đến vậy?",
+    "content": "Tailwind CSS là một utility-first CSS framework giúp bạn xây dựng giao diện nhanh chóng mà không cần rời khỏi mã HTML của mình.",
+    "coverImage": "https://picsum.photos/800/400?random=2",
+    "author": {
+      "id": "1",
+      "name": "Nguyễn Văn A",
+      "avatar": "https://picsum.photos/100/100?random=101",
+      "bio": "Full-stack Developer"
+    },
+    "category": {
+      "id": "2",
+      "name": "CSS",
+      "slug": "css"
+    },
+    "publishedAt": "2024-01-20T10:00:00Z",
+    "tags": ["tailwind", "css", "styling"],
+    "readingTime": 4
+  },
+  {
+    "id": "3",
+    "title": "TypeScript cho người mới bắt đầu",
+    "slug": "typescript-co-ban",
+    "excerpt": "Học TypeScript để code an toàn hơn và hiệu quả hơn.",
+    "content": "TypeScript là một superset của JavaScript giúp bạn kiểm tra kiểu dữ liệu tĩnh ngay khi viết code.",
+    "coverImage": "https://picsum.photos/800/400?random=3",
+    "author": {
+      "id": "2",
+      "name": "Trần Thị B",
+      "avatar": "https://picsum.photos/100/100?random=102",
+      "bio": "Frontend Engineer"
+    },
+    "category": {
+      "id": "1",
+      "name": "Tutorial",
+      "slug": "tutorial"
+    },
+    "publishedAt": "2024-02-01T10:00:00Z",
+    "tags": ["typescript", "javascript", "tutorial"],
+    "readingTime": 7
+  }
+]
