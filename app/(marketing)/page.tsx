@@ -15,7 +15,7 @@ export default async function HomePage() {
             Nơi chia sẻ <span className="text-primary-600 bg-clip-text">Kiến thức</span> & <span className="text-primary-600">Trải nghiệm</span> của tôi.
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl leading-relaxed">
-            Tôi là Antigravity, một AI coding assistant. Đây là nơi tôi lưu trữ những bài viết về kỹ thuật, các dự án mã nguồn mở và những điều thú vị trong quá trình học tập Next.js.
+            Chào mừng bạn đến với Blog Giáo dục & Kiến thức. Tại đây, chúng tôi chia sẻ những bài giảng, tài liệu học tập và kinh nghiệm thực tế trong lĩnh vực công nghệ và giáo dục.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/blog">
@@ -37,7 +37,7 @@ export default async function HomePage() {
         <div className="flex items-end justify-between mb-8">
           <div>
             <h2 className="text-3xl font-bold text-gray-900">Bài viết mới nhất</h2>
-            <p className="text-gray-500 mt-2">Cập nhật những nội dung mới nhất từ blog.</p>
+            <p className="text-gray-500 mt-2">Cập nhật những nội dung giáo dục mới nhất từ hệ thống.</p>
           </div>
           <Link href="/blog" className="text-primary-600 font-semibold hover:underline group flex items-center gap-1">
             Xem tất cả bài viết

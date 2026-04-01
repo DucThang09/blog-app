@@ -21,7 +21,7 @@ export default function Header() {
             className="rounded"
             priority
           />
-          <span className="text-xl font-bold text-gray-800">NextJS Blog</span>
+          <span className="text-xl font-bold text-gray-800">Blog Giáo dục & Kiến thức</span>
         </Link>
 
         {/* Desktop Navigation */}

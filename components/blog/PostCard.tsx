@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { format } from 'date-fns'
 import { vi } from 'date-fns/locale'
 import { Post } from '@/types'
+import CategoryBadge from './CategoryBadge'
 
 interface PostCardProps {
   post: Post
@@ -28,9 +29,7 @@ export default function PostCard({ post }: PostCardProps) {
         <div className="p-4 flex-grow flex flex-col">
           {/* Category */}
           <div className="mb-2">
-            <span className="text-xs font-semibold px-2.5 py-0.5 rounded bg-primary-100 text-primary-800 uppercase tracking-wider">
-              {post.category.name}
-            </span>
+            <CategoryBadge category={post.category} />
           </div>
 
           {/* Title */}
