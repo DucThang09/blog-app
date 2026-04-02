@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+NextJS Blog Learning Platform
+Dự án Blog cá nhân và Portfolio được xây dựng trên nền tảng Next.js (App Router) với thiết kế thân thiện, tối giản và tối ưu hóa hiệu suất (SEO, SSG/SSR).
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Live Demo : https://blog-app-six-zeta-50.vercel.app/
+Mô tả chi tiết : https://docs.google.com/document/d/15Xzsl9AZSJcHNa1N2aQGimKI8iNl5XE_/edit?usp=sharing&ouid=105471340210228464438&rtpof=true&sd=true
+Công Nghệ (Tech Stack)
+Core: Next.js 14, React 22, TypeScript.
+UI/Styling: Tailwind CSS, Lucide React.
+Cấu Trúc Dự Án (Project Tree)
+blognextjs/
+├── app/                              # Next.js App Router (Routing logic)
+│   ├── (marketing)/                  # Group Layout: Trang tĩnh
+│   │   ├── about/
+│   │   │   └── page.tsx              # Giới thiệu bản thân
+│   │   ├── contact/
+│   │   │   └── page.tsx              # Form liên hệ
+│   │   └── page.tsx                  # Trang chủ (Portfolio & Latest Posts)
+│   ├── api/
+│   │   └── contact/
+│   │       └── route.ts              # API Route xử lý nhận form liên hệ
+│   ├── blog/                         # Sub-route Blog chính
+│   │   ├── [slug]/                   # Trang xem chi tiết bài viết (SSG, SEO)
+│   │   │   ├── @comments/            # Parallel Route (Demo)
+│   │   │   │   └── default.tsx
+│   │   │   ├── loading.tsx           # Skeleton cho riêng bài viết
+│   │   │   └── page.tsx              
+│   │   ├── category/                 # Bộ lọc Blog theo danh mục
+│   │   │   └── [category]/
+│   │   │       └── page.tsx          
+│   │   ├── error.tsx                 # Error Boundary cấp cục bộ (Blog)
+│   │   └── page.tsx                  # Danh sách toàn bộ bài viết
+│   ├── error.tsx                     # Error Boundary cấp Root (Global Error)
+│   ├── globals.css                   # File CSS định dạng Root Tailwind
+│   ├── layout.tsx                    # Root Layout chứa Header, Navigation, Footer
+│   ├── loading.tsx                   # Loading Skeleton cấp Root (Spinkit)
+│   └── not-found.tsx                 # Custom 404 Page Error Handling
+├── components/                       # Shared UI Components
+│   ├── blog/                         # Chứa Component riêng cho Logic Blog
+│   │   ├── PostCard.tsx
+│   │   └── PostList.tsx
+│   ├── forms/                        # Chứa các Component Form Input nghiệp vụ
+│   │   ├── CommentForm.tsx           # Xử lý nhập Bình luận thực tế (Optimistic Update)
+│   │   └── ContactForm.tsx
+│   ├── layout/                       # Thành phần dùng chung toàn cục thiết kế
+│   │   ├── Footer.tsx
+│   │   ├── Header.tsx
+│   │   └── Navigation.tsx
+│   └── ui/                           # Thành phần nguyên tử UI tái sử dụng
+│       ├── Button.tsx
+│       ├── Card.tsx
+│       ├── Input.tsx
+│       └── Textarea.tsx
+├── data/                             # Mock Database
+│   └── posts.json                    # Nguồn file giả lập dữ liệu tĩnh Database
+├── lib/                              # Helper & Core Logic
+│   ├── api.ts                        # Logic query JSON (getPosts, filters)
+│   ├── utils.ts                      # Hàm format/dựng utilities string, class tailwind 
+│   └── validations.ts                # Khởi tạo form schema Zod rules để validate dữ liệu
+├── types/
+│   └── index.ts                      # Nơi định hình Typescript Interfaces (Post, Category)
+├── public/                           # Chứa hình ảnh tĩnh, phông chữ, v.v
+├── next.config.js                    # File cấu hình Nextjs (như định tuyến Image hostname)
+├── package.json                      # Quản lý dependencies
+├── postcss.config.mjs                # Thiết lập công cụ Postcss xử lý Tailwind V3
+├── tailwind.config.ts                # Định cấu hình class cho TailwindCSS
+└── tsconfig.json                     # Typescript configuration rules
